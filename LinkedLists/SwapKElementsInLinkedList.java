@@ -5,6 +5,8 @@ public class SwapKElementsInLinkedList {
      * Example : List = 1 -> 3 -> 5 -> 7 -> 9 -> 11 , k = 2
      *           New List = 9 -> 11 -> 5 -> 7 -> 1 -> 3
      * 
+     * Time Complexity = O(n)
+     *
      * Algorithm explanation by steps:
      * -Find the K element from the start
      * -Find the K element from the last and save the node before it (I'll refer to it as prev).
