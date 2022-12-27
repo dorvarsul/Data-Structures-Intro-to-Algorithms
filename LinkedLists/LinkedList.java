@@ -1,17 +1,40 @@
+package LinkedLists;
+
 public class LinkedList {
-    IntNode head;
-    
-    public LinkedList(IntNode head)
+    private Node _head;
+
+    // Constructors
+    public LinkedList()
     {
-        this.head = head;
+        _head = null;
+    }
+    public LinkedList(Node n)
+    {
+        _head = n;
     }
 
-    public IntNode getHead()
+    // Add to list - Complexity O(1)
+    public void addToList(int x)
     {
-        return this.head;
+        Node p = new Node(x);
+
+            if (_head != null)
+            {
+                p.setNext(_head);
+            }
+            _head = p;
     }
-    public void setHead(IntNode head)
+
+    // Print the linked list
+    public String toString()
     {
-        this.head = head;
+        String str = "";
+        Node p = _head;
+        while (p != null)
+        {
+            str += "-| " + p.getVal() + " |-";
+            p = p.getNext();
+        }
+        return str;
     }
 }
